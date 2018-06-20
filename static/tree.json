@@ -1,0 +1,134 @@
+{
+    "data": [
+        {
+            "catalogCount": 13,
+            "children": [
+                {
+                    "catalogCount": 3,
+                    "children": [
+                        {
+                            "catalogCount": 3,
+                            "children": [],
+                            "id": "ff80808163d385820163d39d480c0001",
+                            "isLeaf": "0",
+                            "isParent": false,
+                            "name": "省司法厅",
+                            "parentId": "ff80808160b11ee80160b123d14c0000",
+                            "resCount": 0,
+                            "type": "RC"
+                        }
+                    ],
+                    "id": "ff80808160b11ee80160b123d14c0000",
+                    "isLeaf": "1",
+                    "isParent": false,
+                    "name": "省直部门",
+                    "parentId": "0",
+                    "resCount": 0,
+                    "type": "RC"
+                },
+                {
+                    "catalogCount": 7,
+                    "children": [
+                        {
+                            "catalogCount": 2,
+                            "children": [
+                                {
+                                    "catalogCount": 2,
+                                    "children": [
+                                        {
+                                            "catalogCount": 2,
+                                            "children": [],
+                                            "id": "ff80808163f6f2d40163f8580b5f086f",
+                                            "isLeaf": "0",
+                                            "isParent": false,
+                                            "name": "合肥市公安局",
+                                            "parentId": "ff80808163f6f2d40163f8572e13086d",
+                                            "resCount": 0,
+                                            "type": "RC"
+                                        }
+                                    ],
+                                    "id": "ff80808163f6f2d40163f8572e13086d",
+                                    "isLeaf": "1",
+                                    "isParent": false,
+                                    "name": "市直部门",
+                                    "parentId": "ff80808163f6f2be0163f7a451180000",
+                                    "resCount": 0,
+                                    "type": "RC"
+                                }
+                            ],
+                            "id": "ff80808163f6f2be0163f7a451180000",
+                            "isLeaf": "1",
+                            "isParent": false,
+                            "name": "合肥市",
+                            "parentId": "402836815f5ce2d9015f5cf260a90e21",
+                            "resCount": 0,
+                            "type": "RC"
+                        },
+                        {
+                            "catalogCount": 5,
+                            "children": [
+                                {
+                                    "catalogCount": 5,
+                                    "children": [
+                                        {
+                                            "catalogCount": 5,
+                                            "children": [],
+                                            "id": "ff80808163d385980163d4a9e6810003",
+                                            "isLeaf": "0",
+                                            "isParent": false,
+                                            "name": "市公安局",
+                                            "parentId": "ff80808163d385980163d4a9b2f80001",
+                                            "resCount": 0,
+                                            "type": "RC"
+                                        },
+                                        {
+                                            "catalogCount": 0,
+                                            "children": [],
+                                            "id": "ff80808163d385980163d4a9f1db0005",
+                                            "isLeaf": "0",
+                                            "isParent": false,
+                                            "name": "市民政局",
+                                            "parentId": "ff80808163d385980163d4a9b2f80001",
+                                            "resCount": 0,
+                                            "type": "RC"
+                                        }
+                                    ],
+                                    "id": "ff80808163d385980163d4a9b2f80001",
+                                    "isLeaf": "1",
+                                    "isParent": false,
+                                    "name": "芜湖市市直部门",
+                                    "parentId": "ff80808163d385820163d39cde180000",
+                                    "resCount": 0,
+                                    "type": "RC"
+                                }
+                            ],
+                            "id": "ff80808163d385820163d39cde180000",
+                            "isLeaf": "1",
+                            "isParent": false,
+                            "name": "芜湖市",
+                            "parentId": "402836815f5ce2d9015f5cf260a90e21",
+                            "resCount": 0,
+                            "type": "RC"
+                        }
+                    ],
+                    "id": "402836815f5ce2d9015f5cf260a90e21",
+                    "isLeaf": "1",
+                    "isParent": false,
+                    "name": "地市",
+                    "parentId": "0",
+                    "resCount": 0,
+                    "type": "RC"
+                }
+            ],
+            "id": "",
+            "isLeaf": "0",
+            "isParent": false,
+            "name": "全部",
+            "parentId": "",
+            "resCount": 0,
+            "type": "RC"
+        }
+    ],
+    "msg": "",
+    "status": true
+}

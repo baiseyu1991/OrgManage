@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 第一题
+    function Sun() {
+        Sun.prototype.num++ ;
+    }
+    Sun.prototype.num = 0
+    for (var i = 0; i < 6; i++) {
+        var test = new Sun();
+    }
+    console.log(test.num);
+
+    // 第二,三,四题
+    function Animal(name,life,damage){
+        this.name = name;
+        this.life = life;
+        this.damage = damage;
+    }
+
+    function Person(name,life,damage){
+        Animal.call(this,name,life,damage);
+        this.type='person';
+    }
+
+    Person.prototype = new Animal();
+    Person.prototype.constructor = Person;
+    Person.prototype.attack = function(enemy){
+        enemy.life-=this.damage;
+        if(enemy.type === 'person'){
+            this.life-=this.damage;
+        }
+        console.log('attack from '+ this.name );
+    }
+
+    function Dog(name,life,damage){
+        Animal.call(this,name,life,damage);
+        this.type='dog';
+    }
+
+    Dog.prototype = new Animal();
+    Dog.prototype.constructor = Person;
+    Dog.prototype.attack = function(enemy){
+        enemy.life-=this.damage;
+        console.log('attack from '+ this.name );
+    }
+
+    function observe(data) {
+        if (!data || typeof data !== 'object') {
+            return;
+        }
+         //监听life属性值变化
+        defineReactive(data, 'life', data.life);
+    }
+
+    function defineReactive(data, key, val) {
+        Object.defineProperty(data, key, {
+            enumerable: true, // 可枚举
+            configurable: false, // 不能再define
+            get: function() {
+                return val;
+            },
+            set: function(newVal) {
+                console.log('监听到值变化了 '+data.name +' : ', val, ' --> ', newVal);
+                val = newVal;
+                if(newVal>10 && newVal<=50){
+                    data.damage = 15;
+                }else if(newVal<=10){
+                    data.damage = 5;
+                }
+            }
+        });
+    }
+
+    var person1 = new Person('person1',100,10);
+    var person2 = new Person('person2',100,10);
+    var dog1 = new Dog('dog1',60,5);
+    var dog2 = new Dog('dog2',60,5);
+    var dog3 = new Dog('dog3',60,5);
+    observe(person1);
+    observe(person2);
+
+    person1.attack(dog1);
+    dog2.attack(dog1);
+    person1.attack(person2);
+    person1.attack(person2);
+    person1.attack(person2);
+    person1.attack(person2);
+    person1.attack(person2);
+    person1.attack(person2);
+    person1.attack(person2);
+    person1.attack(person2);
+    person1.attack(person2);
+
+    function isGameOver(){
+        if((person1.life==0&&person2.life==0)||(dog1.life==0&&dog2.life==0&&dog3.life==0)){
+                console.log('Game over');
+                clearInterval(timer);
+            }
+    }
+    
+    var timer = setInterval(isGameOver,1000);
+
+    </script>
+</body>
+</html>
